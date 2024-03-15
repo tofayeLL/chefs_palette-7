@@ -1,0 +1,86 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Grilled Salmon",
+      "image": "https://i.ibb.co/P9zdXfx/grilledsalmon.jpg",
+      "short_description": "Juicy grilled salmon fillets with a zesty lemon herb marinade.",
+      "ingredients": [
+        "4 salmon fillets (about 150g each)",
+        "2 lemons, juiced",
+        "4 cloves garlic, minced",
+        "2 tbsp olive oil"
+      ],
+      "preparing_time": "20 min",
+      "calories": "250 calories"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Caesar Salad",
+      "image": "https://i.ibb.co/kDTSWJ5/caesar-salad.jpg",
+      "short_description": "Classic Caesar salad with crisp romaine lettuce, croutons, and Parmesan cheese.",
+      "ingredients": [
+        "1 head romaine lettuce, chopped",
+        "1 cup croutons",
+        "1/4 cup grated Parmesan cheese",
+        "1/4 cup Caesar dressing"
+      ],
+      "preparing_time": "15 min",
+      "calories": "180 calories"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Stir-Fry",
+      "image": "https://i.ibb.co/GC80xpw/vegetable-stir-fry.jpg",
+      "short_description": "A colorful and nutritious dish packed with assorted vegetables.",
+      "ingredients": [
+        "300 g mixed vegetables (carrots, bell peppers, broccoli, snap peas)",
+        "200 g firm tofu, cubed",
+        "3 tbsp soy sauce",
+        "2 cloves garlic, minced"
+      ],
+      "preparing_time": "20 min",
+      "calories": "200 calories"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Pesto Pasta",
+      "image": "https://i.ibb.co/RpVgDZq/esto-pasta.jpg",
+      "short_description": "Delicious pasta tossed in a vibrant basil pesto sauce.",
+      "ingredients": [
+        "300 g spaghetti",
+        "100 g fresh basil leaves",
+        "50 g pine nuts",
+        "2 cloves garlic, minced"
+      ],
+      "preparing_time": "25 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Chicken Caesar Wrap",
+      "image": "https://i.ibb.co/yWDSz3b/chicken-caesar-wrap.jpg",
+      "short_description": "Satisfying wrap filled with grilled chicken, Caesar salad, and creamy dressing.",
+      "ingredients": [
+        "2 large flour tortillas",
+        "200 g grilled chicken breast, sliced",
+        "1 cup Caesar salad",
+        "2 tbsp Caesar dressing"
+      ],
+      "preparing_time": "15 min",
+      "calories": "350 calories"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Tomato Bruschetta",
+      "image": "https://i.ibb.co/72MDd6p/tomato-bruschetta.jpg",
+      "short_description": "Classic Italian appetizer with diced tomatoes, basil, and garlic on toasted bread.",
+      "ingredients": [
+        "4 slices Italian bread",
+        "2 large tomatoes, diced",
+        "2 cloves garlic, minced",
+        "Handful of fresh basil leaves, chopped"
+      ],
+      "preparing_time": "10 min",
+      "calories": "150 calories"
+    }
+  ]
