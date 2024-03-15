@@ -10,8 +10,8 @@
         "4 cloves garlic, minced",
         "2 tbsp olive oil"
       ],
-      "preparing_time": "20 min",
-      "calories": "250 calories"
+      "preparing_time": "20",
+      "calories": "250 "
     },
     {
       "recipe_id": 2,
@@ -24,8 +24,8 @@
         "1/4 cup grated Parmesan cheese",
         "1/4 cup Caesar dressing"
       ],
-      "preparing_time": "15 min",
-      "calories": "180 calories"
+      "preparing_time": "15",
+      "calories": "180 "
     },
     {
       "recipe_id": 3,
@@ -38,8 +38,8 @@
         "3 tbsp soy sauce",
         "2 cloves garlic, minced"
       ],
-      "preparing_time": "20 min",
-      "calories": "200 calories"
+      "preparing_time": "20",
+      "calories": "200 "
     },
     {
       "recipe_id": 4,
@@ -52,8 +52,8 @@
         "50 g pine nuts",
         "2 cloves garlic, minced"
       ],
-      "preparing_time": "25 min",
-      "calories": "320 calories"
+      "preparing_time": "25",
+      "calories": "320 "
     },
     {
       "recipe_id": 5,
@@ -66,8 +66,8 @@
         "1 cup Caesar salad",
         "2 tbsp Caesar dressing"
       ],
-      "preparing_time": "15 min",
-      "calories": "350 calories"
+      "preparing_time": "15",
+      "calories": "350 "
     },
     {
       "recipe_id": 6,
@@ -80,7 +80,7 @@
         "2 cloves garlic, minced",
         "Handful of fresh basil leaves, chopped"
       ],
-      "preparing_time": "10 min",
-      "calories": "150 calories"
+      "preparing_time": "10",
+      "calories": "150"
     }
   ]
