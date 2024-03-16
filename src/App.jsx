@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [carts, setCarts] = useState([]);
+  const [currentCooks, setCurrentCooks] = useState([]);
 
   const handleCook = (recipe) => {
 
@@ -20,12 +21,23 @@ function App() {
       const newCarts = [...carts, recipe];
       setCarts(newCarts);
     }
-    else{
+    else {
       // alert('can not cook one item twice');
       toast.warn("you are not allowed to cook one item twice");
-      
+
     }
 
+
+
+  }
+
+
+  const handlePrepare = (wCook) => {
+  const remainingWantToCookItem = carts.filter(cart => cart.recipe_id !== wCook.recipe_id )
+  setCarts(remainingWantToCookItem);
+
+  const addCurrentCook = [...currentCooks, wCook];
+  setCurrentCooks(addCurrentCook);
 
 
   }
@@ -37,7 +49,6 @@ function App() {
     <>
 
       <div className='container mx-auto lg:px-16 px-2'>
-
 
         <div>
           <Nav></Nav>
@@ -56,7 +67,10 @@ function App() {
 
           <div className='bg-green-300  w-full'>
             <Tables
-              carts={carts} ></Tables>
+              carts={carts}
+              handlePrepare={handlePrepare}
+              currentCooks={currentCooks}
+               ></Tables>
           </div>
 
 

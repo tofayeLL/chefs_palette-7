@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types';
-const Tables = ({ carts }) => {
+const Tables = ({ carts, handlePrepare,  currentCooks }) => {
+   
 
     return (
         <div>
@@ -13,25 +14,25 @@ const Tables = ({ carts }) => {
 
             {/* table content */}
             <div className="px-10 my-4">
-               
-                   
-                        <div className="grid grid-cols-4 gap-3 px-7">
-                            <p className="font-medium">Name</p>
-                            <p  className="font-medium">Time</p>
-                            <p  className="font-medium">Calories</p>
-                            <p></p>
-                           
-                        </div>
-                
-                    
-                           <div className="space-y-3 ">
-                           {
-                                carts.map((cart, index) => 
-                                <div key={index} >
 
-                                   <div className="grid grid-cols-4 gap-6  space-y-6 bg-slate-200 items-center px-2 py-2 my-3 rounded-sm">
 
-                                   <p className="flex items-center ">{index + 1}
+                <div className="grid grid-cols-4 gap-4 px-7">
+                    <p className="font-medium">Name</p>
+                    <p className="font-medium">Time</p>
+                    <p className="font-medium">Calories</p>
+                    <p></p>
+
+                </div>
+
+
+                <div className="space-y-3 ">
+                    {
+                        carts.map((cart, index) =>
+                            <div key={index} >
+
+                                <div className="grid grid-cols-4 gap-4  space-y-6 bg-slate-200 items-center px-2 py-2 my-3 rounded-sm">
+
+                                    <p className="flex items-center ">{index + 1}
                                         <td className="ml-4"> {cart.recipe_name}</td>
                                     </p>
 
@@ -39,20 +40,20 @@ const Tables = ({ carts }) => {
 
                                     <td>{cart.calories} calories</td>
 
-                                    <button className="px-4 py-2 font-semibold bg-green-300 rounded-full">prepare</button>
+                                    <button onClick={() => handlePrepare(cart)} className="px-4 py-2 font-semibold bg-green-300 rounded-full">prepare</button>
 
-                                   </div>
-                                    
-                                                                
-                                    </div>
-
-                                )
-                            }
-                       
-                           </div>
+                                </div>
 
 
-                    
+                            </div>
+
+                        )
+                    }
+
+                </div>
+
+
+
             </div>
 
 
@@ -63,10 +64,68 @@ const Tables = ({ carts }) => {
 
 
             <div className="text-center px-32">
-                <h3 className="text-xl font-bold">Currently cooking: 02:
+                <h3 className="text-xl font-bold">Currently cooking: {currentCooks.length}:
                     <p className="border-b-2"></p>
                 </h3>
             </div>
+
+
+            <div className="px-10 my-4">
+
+            <div className="grid grid-cols-4 gap-4 px-7">
+                    <p className="font-medium">Name</p>
+                    <p className="font-medium">Time</p>
+                    <p className="font-medium">Calories</p>
+                    <p></p>
+
+                </div>
+
+
+
+
+
+                <div className="space-y-3 ">
+                    {
+                        currentCooks.map((currentCook, index) =>
+                            <div key={index} >
+
+                                <div className="grid grid-cols-4 gap-4  space-y-6 bg-slate-200 items-center px-2 py-2 my-3 rounded-sm">
+
+                                    <p className="flex items-center ">{index + 1}
+                                        <td className="ml-4"> {currentCook.recipe_name}</td>
+                                    </p>
+
+                                    <td>{currentCook.preparing_time} minutes</td>
+
+                                    <td>{currentCook.calories} calories</td>
+
+                                    <button onClick={() => handlePrepare(currentCook)} className="px-4 py-2 font-semibold bg-green-300 rounded-full">prepare</button>
+
+                                </div>
+
+
+                            </div>
+
+                        )
+                    }
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
 
 
         </div>
@@ -74,7 +133,9 @@ const Tables = ({ carts }) => {
 };
 
 Tables.propTypes = {
-    carts: PropTypes.array
+    carts: PropTypes.array,
+    handlePrepare: PropTypes.func,
+    currentCooks: PropTypes.array
 
 }
 
