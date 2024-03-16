@@ -7,7 +7,7 @@ const Nav = () => {
         <div className='flex justify-between items-center my-10'>
 
             <div >
-                <h3 className="text-3xl font-bold">Calorie Cooks</h3>
+                <h3 className="lg:text-4xl text-xl font-bold">Calorie Cooks</h3>
             </div>
 
             <div className="lg:flex hidden justify-center items-center ">
@@ -17,17 +17,17 @@ const Nav = () => {
                 <button className="px-4 py-2">Search</button>
             </div>
 
-            <div className='flex justify-center items-center gap-2  '>
-                <div className='bg-slate-200 flex  items-center rounded-full space-x-2 px-3 py-1'>
-                <span className='font-semibold'><CiSearch></CiSearch></span>
-                    <input className='bg-slate-200  rounded-full outline-none ' type="search" name="" id="" placeholder='search' />   
+            <div className='flex justify-center items-center gap-4  '>
+                <div className='bg-slate-200 flex  items-center rounded-full space-x-2 px-3 py-2 w-[70%]'>
+                    <span className='font-semibold'><CiSearch></CiSearch></span>
+                    <input className='bg-slate-200  rounded-full outline-none w-[30vh]' type="search" name="" id="" placeholder='search' />
                 </div>
 
-                <div>
-                    <img className='bg-green-300 rounded-full ' src={user} alt="" />
+                <div >
+                    <img className='bg-green-300 rounded-full lg:p-2 w-[16vh] lg:w-[8vh]' src={user} alt="" />
                 </div>
             </div>
-            
+
         </div>
     );
 };

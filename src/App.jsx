@@ -65,14 +65,14 @@ function App() {
           <Nav></Nav>
         </div>
 
-        <div>
+        <div className='my-14'>
           <Banner></Banner>
         </div>
 
-        <div className='my-28'>
+        <div className='my-24'>
 
 
-          <div className='text-center space-y-4 my-10'>
+          <div className='text-center space-y-6 my-10'>
             <h3 className='text-5xl font-bold'>Our Recipes</h3>
             <p className='lg:w-[70%] mx-auto'>Explore our Recipes section for a delectable array of calorie-conscious dishes designed to fuel your body , tantalize your taste buds and nutritious masterpiece, crafted to support your health and wellness goals. </p>
           </div>
