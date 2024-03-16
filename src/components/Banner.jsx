@@ -2,6 +2,7 @@
 
 const Banner = () => {
     return (
+        
         <div className="bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(./images/banner.png)]  bg-center bg-cover lg:py-32 py-8 rounded-lg my-12" >
 
            <div  className="text-center lg:space-y-10 space-y-6 lg:px-0 px-4">

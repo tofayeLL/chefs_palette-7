@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Recipe = ({ recipe, handleCook }) => {
     const { recipe_name, image, short_description, ingredients, preparing_time, calories } = recipe;
     return (
-        <div className="space-y-4 p-3 border-4 border-yellow-200 rounded-md">
+        <div className="space-y-4 p-4 border-[1px] border-slate-300 rounded-md shadow-lg  py-6 ">
 
             <div>
                 <img className="rounded-lg" src={image} alt="" />
@@ -17,7 +17,7 @@ const Recipe = ({ recipe, handleCook }) => {
             <div className="border-b-2"></div>
 
             <div>
-                <h4 className="text-xl font-medium">Ingredients: {ingredients.length}</h4>
+                <h4 className="text-xl font-medium mb-4">Ingredients: {ingredients.length}</h4>
 
                 <div>
                     {

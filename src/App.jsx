@@ -80,13 +80,13 @@ function App() {
 
 
 
-          <div className='lg:flex gap-4 '>
+          <div className='lg:flex gap-6 '>
 
-            <div className=' bg-red-300 lg:w-[55%] mx-auto'>
+            <div className='lg:w-[55%] mx-auto'>
               <Recipes handleCook={handleCook}></Recipes>
             </div>
 
-            <div className='bg-green-300  lg:w-[45%] mx-auto'>
+            <div className='lg:w-[45%] mx-auto'>
               <Tables
                 carts={carts}
                 handlePrepare={handlePrepare}

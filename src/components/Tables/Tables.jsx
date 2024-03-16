@@ -5,7 +5,7 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
 
     return (
 
-        <div className='my-6 '>
+        <div className='border-[1px] border-slate-300 rounded-lg shadow-lg py-6'>
 
             <div className="text-center lg:px-32 px-10 lg:py-0 py-5 ">
                 <h3 className="text-xl font-bold">Want to cook: {carts.length}
@@ -17,7 +17,7 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
 
             {/* want to cook table content */}
 
-            <div className="lg:px-10 my-4 px-2">
+            <div className="lg:px-5 my-4 px-2">
 
 
                 <div className="grid grid-cols-4 lg:gap-4 gap-5 lg:px-7 px-4">
@@ -29,12 +29,12 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
                 </div>
 
 
-                <div className="space-y-3 ">
+                <div className="my-3">
                     {
                         carts.map((cart, index) =>
                             <div key={index} >
 
-                                <div className="grid grid-cols-4 gap-8 lg:gap-4  space-y-6 bg-slate-200 items-center lg:px-2 px-5 py-2 my-3 rounded-sm">
+                                <div className="grid grid-cols-4 gap-8 lg:gap-4  bg-slate-200 items-center lg:px-2 px-5 py-4 border-b-[1px] border-slate-300 rounded-sm">
 
                                     <p className="flex items-center justify-center  ">{index + 1}
                                         <td className="lg:ml-4 ml-2"> {cart.recipe_name}</td>
@@ -44,7 +44,7 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
 
                                     <td>{cart.calories} calories</td>
 
-                                    <button onClick={() => handlePrepare(cart)} className="lg:px-4  py-2 font-semibold bg-green-300 rounded-full hover:bg-blue-300 
+                                    <button onClick={() => handlePrepare(cart)} className="lg:px-4 py-2  font-semibold bg-green-300 lg:rounded-full rounded-lg hover:bg-blue-300 
                                     text-xs lg:text-base ">prepare</button>
 
                                 </div>
@@ -75,7 +75,7 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
             </div>
 
 
-            <div className="lg:px-10 px-2 my-4">
+            <div className="lg:px-5 px-2 my-4 ">
 
             <div className="grid grid-cols-4 lg:gap-4 gap-10 px-7">
                     <p className="font-medium">Name</p>
@@ -86,12 +86,12 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
                 </div>
 
 
-                <div className="space-y-3 ">
+                <div className="my-3">
                     {
                         currentCooks.map((currentCook, index) =>
                             <div key={index} >
 
-                                <div className="grid grid-cols-4 lg:gap-4 gap-10  space-y-6 bg-slate-200 items-center lg:px-2 px-10 py-2 my-3 rounded-sm">
+                                <div className="grid grid-cols-4 lg:gap-6 gap-10   bg-slate-200 items-center lg:px-2 px-10 py-4  rounded-sm  border-b-[1px] border-slate-300">
 
                                     <p className="flex items-center justify-center">{index + 1}
                                         <td className="lg:ml-4 ml-3"> {currentCook.recipe_name}</td>
@@ -115,7 +115,7 @@ const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
                 <div className="grid grid-cols-2 p-2">
                 
                     <div  >
-                        <h3 className="font-bold lg:text-base text-sm">Total Times = {times} minutes</h3>
+                        <h3 className="font-bold lg:text-base  text-sm">Total Times = {times} minutes</h3>
                     </div>
                     <div >
                         <h3 className="font-bold lg:text-base text-sm">Total Calories = {calories} calories</h3>
