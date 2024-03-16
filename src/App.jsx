@@ -21,7 +21,8 @@ function App() {
       setCarts(newCarts);
     }
     else{
-      alert('can not cook one item twice');
+      // alert('can not cook one item twice');
+      toast.warn("you are not allowed to cook one item twice");
       
     }
 
