@@ -3,7 +3,7 @@ import { RiFireLine } from "react-icons/ri";
 import PropTypes from 'prop-types';
 
 const Recipe = ({ recipe, handleCook }) => {
-    const { recipe_id, recipe_name, image, short_description, ingredients, preparing_time, calories } = recipe;
+    const { recipe_name, image, short_description, ingredients, preparing_time, calories } = recipe;
     return (
         <div className="space-y-4 p-3 border-4 border-yellow-200 rounded-md">
 
@@ -49,7 +49,7 @@ const Recipe = ({ recipe, handleCook }) => {
             </div>
 
 
-            <button onClick={() => handleCook(recipe)} className="px-4 py-2 font-semibold bg-green-300 rounded-full">Want to Cook</button>
+            <button onClick={() => handleCook(recipe)} className="px-4 py-2 font-semibold bg-green-300 rounded-full hover:bg-blue-300">Want to Cook</button>
 
 
 
@@ -58,8 +58,8 @@ const Recipe = ({ recipe, handleCook }) => {
 };
 
 Recipe.propTypes = {
-    recipe : PropTypes.object,
-    handleCook : PropTypes.func
+    recipe: PropTypes.object,
+    handleCook: PropTypes.func
 
 }
 

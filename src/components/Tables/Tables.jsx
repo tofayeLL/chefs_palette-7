@@ -1,18 +1,22 @@
 
 import PropTypes from 'prop-types';
-const Tables = ({ carts, handlePrepare,  currentCooks }) => {
+const Tables = ({ carts, handlePrepare,  currentCooks, times, calories }) => {
    
 
     return (
-        <div>
+        
+        <div className='my-6'>
+
             <div className="text-center px-32">
                 <h3 className="text-xl font-bold">Want to cook: {carts.length}
-                    <p className="border-b-2"></p>
+                    <p className="border-b-2 mt-3"></p>
                 </h3>
             </div>
 
 
-            {/* table content */}
+
+            {/* want to cook table content */}
+
             <div className="px-10 my-4">
 
 
@@ -40,7 +44,7 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
 
                                     <td>{cart.calories} calories</td>
 
-                                    <button onClick={() => handlePrepare(cart)} className="px-4 py-2 font-semibold bg-green-300 rounded-full">prepare</button>
+                                    <button onClick={() => handlePrepare(cart)} className="px-4 py-2 font-semibold bg-green-300 rounded-full hover:bg-blue-300">prepare</button>
 
                                 </div>
 
@@ -52,6 +56,8 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
 
                 </div>
 
+               
+
 
 
             </div>
@@ -59,13 +65,11 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
 
 
 
-
-
-
+              {/* currenntly cooking content */}
 
             <div className="text-center px-32">
                 <h3 className="text-xl font-bold">Currently cooking: {currentCooks.length}:
-                    <p className="border-b-2"></p>
+                    <p className="border-b-2 mt-3"></p>
                 </h3>
             </div>
 
@@ -79,9 +83,6 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
                     <p></p>
 
                 </div>
-
-
-
 
 
                 <div className="space-y-3 ">
@@ -99,8 +100,6 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
 
                                     <td>{currentCook.calories} calories</td>
 
-                                    <button onClick={() => handlePrepare(currentCook)} className="px-4 py-2 font-semibold bg-green-300 rounded-full">prepare</button>
-
                                 </div>
 
 
@@ -112,20 +111,18 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
                 </div>
 
 
-
-
-
+                <div className="grid grid-cols-2 p-2">
+                
+                    <div  >
+                        <h3 className="font-bold text-base">Total Times = {times} minutes</h3>
+                    </div>
+                    <div >
+                        <h3 className="font-bold text-base">Total Calories = {calories} calories</h3>
+                    </div>
+                                     
+                </div>
 
             </div>
-
-
-
-
-
-
-
-
-
 
 
         </div>
@@ -135,7 +132,9 @@ const Tables = ({ carts, handlePrepare,  currentCooks }) => {
 Tables.propTypes = {
     carts: PropTypes.array,
     handlePrepare: PropTypes.func,
-    currentCooks: PropTypes.array
+    currentCooks: PropTypes.array,
+    times: PropTypes.number,
+    calories: PropTypes.number
 
 }
 
