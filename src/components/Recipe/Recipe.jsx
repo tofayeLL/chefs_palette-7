@@ -1,5 +1,6 @@
 import { CiTimer } from "react-icons/ci";
 import { RiFireLine } from "react-icons/ri";
+import PropTypes from 'prop-types';
 
 const Recipe = ({ recipe, handleCook }) => {
     const { recipe_id, recipe_name, image, short_description, ingredients, preparing_time, calories } = recipe;
@@ -55,5 +56,11 @@ const Recipe = ({ recipe, handleCook }) => {
         </div>
     );
 };
+
+Recipe.propTypes = {
+    recipe : PropTypes.object,
+    handleCook : PropTypes.func
+
+}
 
 export default Recipe;

@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 const Tables = ({ carts }) => {
 
     return (
@@ -12,40 +12,44 @@ const Tables = ({ carts }) => {
 
 
             {/* table content */}
-            <div className="px-10">
+            <div className="px-10 my-4">
                
                    
-                        <div className="flex gap-16 items-center justify-between">
-                            <p>name</p>
-                            <p>name</p>
-                            <p>name</p>
+                        <div className="grid grid-cols-4 gap-3 px-7">
+                            <p className="font-medium">Name</p>
+                            <p  className="font-medium">Time</p>
+                            <p  className="font-medium">Calories</p>
                             <p></p>
+                           
                         </div>
                 
                     
-                            {
-                                carts.map((cart, index) => <div key={index} className="flex justify-between gap-14">
+                           <div className="space-y-3 ">
+                           {
+                                carts.map((cart, index) => 
+                                <div key={index} >
 
-                                    <p className="flex items-center ">{index + 1}
-                                        <td className="ml-2"> {cart.recipe_name}</td>
+                                   <div className="grid grid-cols-4 gap-6  space-y-6 bg-slate-200 items-center px-2 py-2 my-3 rounded-sm">
+
+                                   <p className="flex items-center ">{index + 1}
+                                        <td className="ml-4"> {cart.recipe_name}</td>
                                     </p>
 
                                     <td>{cart.preparing_time} minutes</td>
+
                                     <td>{cart.calories} calories</td>
+
+                                    <button className="px-4 py-2 font-semibold bg-green-300 rounded-full">prepare</button>
+
+                                   </div>
                                     
-                                    
-                                    
-                                    
+                                                                
                                     </div>
-
-
-
-
-
 
                                 )
                             }
                        
+                           </div>
 
 
                     
@@ -68,5 +72,10 @@ const Tables = ({ carts }) => {
         </div>
     );
 };
+
+Tables.propTypes = {
+    carts: PropTypes.array
+
+}
 
 export default Tables;
