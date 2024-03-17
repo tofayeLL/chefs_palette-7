@@ -6,7 +6,6 @@ import Nav from './components/Nav'
 import Recipes from './components/Recipes/Recipes'
 import Tables from './components/Tables/Tables';
 import { ToastContainer, toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -27,7 +26,7 @@ function App() {
       setCarts(newCarts);
     }
     else {
-      toast.warn("you are not allowed to cook one item twice");
+      toast.warn("You are not allowed for cook one item twice");
     }
 
   }
@@ -86,7 +85,7 @@ function App() {
               <Recipes handleCook={handleCook}></Recipes>
             </div>
 
-            <div className='lg:w-[45%] mx-auto'>
+            <div className='lg:w-[45%] mx-auto lg:mt-0 mt-6'>
               <Tables
                 carts={carts}
                 handlePrepare={handlePrepare}
